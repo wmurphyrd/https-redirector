@@ -1,0 +1,14 @@
+{
+  "name": "https-redirector",
+  "version": "1.0.0",
+  "description": "Standalone express server to redirect port 80 unsecure traffic to https",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production authbind node index.js"
+  },
+  "author": "Will Murphy",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
