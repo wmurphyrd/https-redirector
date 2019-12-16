@@ -1,11 +1,13 @@
 // https://stackoverflow.com/a/7458587
-// set up plain http server
-var http = express.createServer()
+const http = require('http')
+const express = require('express')
+
+const app = express()
 
 // set up a route to redirect http to https
-http.get('*', function(req, res) {  
+app.get('*', function(req, res) { 
     res.redirect('https://' + req.headers.host + req.url)
 })
 
-http.listen(80);
+http.createServer(app).listen(80)
 console.log('https-redirector started')
